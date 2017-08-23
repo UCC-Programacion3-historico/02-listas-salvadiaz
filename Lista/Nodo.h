@@ -9,18 +9,29 @@ private:
   Nodo<T> *next;
 public:
   Nodo(){
-    next = NULL;}
-  Nodo(T d, Nodo* n){
+    next = NULL;
+      
+}
+  Nodo(T d, Nodo<T>* n){
     dato = d;
-    next = n;}
+    next = n;
+      
+}
   T getDato(){
     return dato;}
   void setDato(T d){
-    dato = d;}
+    dato = d;
+      
+}
   Nodo<T> getNext(){
-    return next;}
-  void setNext(Nodo* n){
-    next = n;}
+    return next;
+      
+}
+  void setNext(Nodo<T> *n){
+    next = n;
+      
+}
+};
 
     
     

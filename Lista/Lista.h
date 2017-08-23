@@ -10,7 +10,7 @@
 template<class T>
 class Lista {
 private:
-
+Nodo<T> inicio;
 public:
     Lista();
 
@@ -85,7 +85,7 @@ int Lista<T>::getTamanio() {
   Nodo<T> *aux = inicio;
   
   while (aux != NULL){
-    cont++;
+    int cont++;
     aux = aux->getNext();}
   return cont;
 }
