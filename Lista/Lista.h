@@ -138,7 +138,9 @@ void Lista<T>::insertarPrimero(T dato) {
  * @param dato dato a insertar
  */
 template<class T>
-void Lista<T>::insertarUltimo(T dato) {}
+void Lista<T>::insertarUltimo(T dato) {
+    Nodo<T> *nu = new Nodo<T>(dato,
+}
 
 
 /**
@@ -147,7 +149,29 @@ void Lista<T>::insertarUltimo(T dato) {}
  * @param pos posicion del nodo a eliminar
  */
 template<class T>
-void Lista<T>::remover(int pos) {}
+void Lista<T>::remover(int pos) {
+    Nodo<T> *aux;
+    int cont = 0;
+    
+    if (pos == 0){
+        if (inicio == NULL){throw 1;} //error 1 si esta vacia
+        inicio= inicio->getNext();
+        delete aux;
+        return;
+    }
+    
+    while (cont < pos-1 && aux != NULL){
+        cont++;
+        aux = aux->getNext();}
+   
+    if (aux->getNext() == NULL){throw 1;} //error 1 si esta vacia
+   
+    Nodo<T> *tmp = aux->getNext();
+    
+    aux->setNext(tmp->getNext());
+
+    delete tmp;
+}
 
 
 /**
