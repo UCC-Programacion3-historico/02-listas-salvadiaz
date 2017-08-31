@@ -55,14 +55,7 @@ Lista<T>::Lista() {
  */
 template<class T>
 Lista<T>::Lista(const Lista<T> &li) {
-  inicio = new Nodo<T> [];
   
-  Nodo <T> tmp = li.incio;
-  Nodo <T> aux = incio;
-  
-  while (tmp != NULL){
-    aux->dato = tmp->dato;
-  }
 }
 
 
